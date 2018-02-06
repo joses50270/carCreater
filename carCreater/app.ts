@@ -1,13 +1,14 @@
 import { Car } from './carClass';
 
-class NewCar extends Car{
-  constructor(doors: any, color: string, carType: string, mpg: any,){
-   super(doors, color, carType, mpg)
 
-  }
-}
+function makeNewCar() {
+  let type =(<HTMLInputElement> document.getElementById('carType')).value
+  let color =(<HTMLInputElement> document.getElementById('color')).value
+  let mpg = (<HTMLInputElement> document.getElementById('mpg')).value
+  let doors = (<HTMLInputElement> document.getElementById('doors')).value
 
-function printCar(){
-  let door = (<HTMLInputElement>document.getElementById('doors')).value;
-  let doorNumber = 
+
+
+  let newCar = new Car(type, color, mpg, doors)
+  console.log(newCar.toString())
 }
