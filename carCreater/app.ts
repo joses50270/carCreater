@@ -1,20 +1,21 @@
-import { Car } from './carClass';
-import * as Vehicle from './carClass'
+import * as Vehicle from "./carClass"
 
-(<HTMLInputElement>document.getElementById("submit")).onclick = function () { makeNewCar() };
+(<HTMLInputElement>document.getElementById("submit")).onclick = function() { newCar() };
 
-function makeNewCar() {
-  let type = (<HTMLInputElement>document.getElementById('carType')).value
-  let color = (<HTMLInputElement>document.getElementById('color')).value
-  let mpg = (<HTMLInputElement>document.getElementById('mpg')).value
-  let doors = (<HTMLInputElement>document.getElementById('doors')).value
+function newCar(){
+    let doors = (<HTMLInputElement>document.getElementById("doors")).value;
+    let mpg = (<HTMLInputElement>document.getElementById("mpg")).value;
+    let cartype = (<HTMLInputElement>document.getElementById("cartype")).value;
+    let color = (<HTMLInputElement>document.getElementById("color")).value; 
 
-  let carObject = {
-    incomingDoors: doors,
-    incomingMpg: mpg,
-    incomingCarType: type,
-    incomingColor: color
-  }
-  let newCar = new Vehicle.Car(carObject)
-  console.log(newCar)
+    let carObject = {
+        incomingDoors: doors,
+        incomingMpg: mpg,
+        incomingCarType: cartype,
+        incomingColor: color
+    }
+
+    let myCar = new Vehicle.Car(carObject)
+
+    console.log(myCar)
 }

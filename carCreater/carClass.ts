@@ -2,7 +2,7 @@ export interface newCar{
     incomingCarType: any,
     incomingDoors: any,
     incomingMpg: any,
-   incomingColor: string,
+    incomingColor: string,
 }
 export class Car {
     color: any;
