@@ -1,11 +1,11 @@
 "use strict";
 exports.__esModule = true;
 var Car = /** @class */ (function () {
-    function Car(incomingDoors, incomingColor, incomingCarType, incomingMpg) {
-        this.doors = incomingDoors;
-        this.color = incomingColor;
-        this.carType = incomingCarType;
-        this.mpg = incomingMpg;
+    function Car(labelledObj) {
+        this.color = labelledObj.incomingColor;
+        this.carType = labelledObj.incomingCarType;
+        this.doors = labelledObj.incomingDoors;
+        this.mpg = labelledObj.incomingMpg;
     }
     return Car;
 }());

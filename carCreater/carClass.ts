@@ -1,13 +1,19 @@
+export interface newCar{
+    incomingCarType: any,
+    incomingDoors: any,
+    incomingMpg: any,
+   incomingColor: string,
+}
 export class Car {
-    doors: any;
     color: any;
     carType: string;
+    doors: any;
     mpg: any;
 
-    constructor(incomingDoors: any, incomingColor: any, incomingCarType: string, incomingMpg: any, ) {
-        this.doors = incomingDoors;
-        this.color = incomingColor;
-        this.carType = incomingCarType;
-        this.mpg = incomingMpg;
-    }
-}
+    constructor(labelledObj: newCar) {
+        this.color = labelledObj.incomingColor;
+        this.carType = labelledObj.incomingCarType;
+        this.doors = labelledObj.incomingDoors;
+        this.mpg = labelledObj.incomingMpg
+     }
+  }
